@@ -27,9 +27,9 @@ const client = new Client({
 });
 
 client.once("ready", () => {
-  console.log("Bot is Ready!");
-  console.log("Code by Wick Studio");
-  console.log("discord.gg/wicks");
+  console.log("Bot HATA SHOLKRN!");
+  console.log("Code by Black o IHaMoY");
+  console.log("discord.gg/Black");
 });
 
 client.on("messageCreate", async (message) => {
@@ -40,36 +40,36 @@ client.on("messageCreate", async (message) => {
 
   if (!member.roles.cache.has(allowedRoleId)) {
     return message.reply({
-      content: "ليس لديك صلاحية لاستخدام هذا الامر!",
+      content: "BBORA TO NASHE BOTI B KARBINI CHONKI TA ROLE NINA!",
       ephemeral: true,
     });
   }
 
   if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
     return message.reply({
-      content: "ليس لديك صلاحية لاستخدام هذا الامر!",
+      content: "BBORA TO NASHE BOTI B KARBINI CHONKI TA ROLE NINA!",
       ephemeral: true,
     });
   }
 
   const embed = new EmbedBuilder()
     .setColor("#0099ff")
-    .setTitle("لوحة تحكم البرودكاست")
+    .setTitle("LAW7A TA7KMA BOTI")
     .setImage(config.image)
     .setDescription("الرجاء اختيار نوع الارسال للاعضاء.");
 
   const row = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
       .setCustomId("send_all")
-      .setLabel("ارسل للجميع")
+      .setLabel("RISALA BO HAMI KASA")
       .setStyle(ButtonStyle.Primary),
     new ButtonBuilder()
       .setCustomId("send_online")
-      .setLabel("ارسل للمتصلين")
+      .setLabel("RISALA BO YET ONLINE")
       .setStyle(ButtonStyle.Success),
     new ButtonBuilder()
       .setCustomId("send_offline")
-      .setLabel("ارسل للغير المتصلين")
+      .setLabel("RISALA BO YET OFFLINE")
       .setStyle(ButtonStyle.Danger),
   );
 
@@ -98,7 +98,7 @@ client.on("interactionCreate", async (interaction) => {
 
       const messageInput = new TextInputBuilder()
         .setCustomId("messageInput")
-        .setLabel("اكتب رسالتك هنا")
+        .setLabel("RISALE BNVISA")
         .setStyle(TextInputStyle.Paragraph);
 
       modal.addComponents(new ActionRowBuilder().addComponents(messageInput));
@@ -161,7 +161,7 @@ client.on("interactionCreate", async (interaction) => {
         );
       }
       await interaction.editReply({
-        content: "تم ارسال رسالتك الى الاعضاء بنجاح.",
+        content: "RISALA TA GAHSHT📬.",
       });
     }
   } catch (error) {
@@ -171,3 +171,4 @@ client.on("interactionCreate", async (interaction) => {
 
 
 client.login(config.TOKEN);
+
